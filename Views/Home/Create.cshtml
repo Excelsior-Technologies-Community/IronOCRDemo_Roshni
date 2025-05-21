@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Upload an Image for OCR</h2>
+
+<form asp-controller="Home" asp-action="Create" method="post" enctype="multipart/form-data">
+    <input type="file" name="imageFile" />
+    <button type="submit">Upload and Read Text</button>
+    <button type="button" onclick="clearForm()">Clear</button>
+
+</form>
+
+@if (ViewBag.OCRText != null)
+{
+    <h3>Recognized Text:</h3>
+    <pre id="ocrResult">@ViewBag.OCRText</pre>
+}
+
+@section Scripts {
+    <script>
+        function clearForm() {
+            document.getElementById("ocrForm").reset(); // Clear file input
+            document.getElementById("ocrResult")?.remove(); // Clear OCR result if shown
+        }
+    </script>
+}
