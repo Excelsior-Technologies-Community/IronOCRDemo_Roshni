@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "RSDocument";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Upload a Scanned Document</h2>
+
+<form asp-action="RSDocument" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".jpg,.jpeg,.png,.pdf" required />
+    <button type="submit">Extract Text</button>
+</form>
+
+@if (ViewBag.ExtractedText != null)
+{
+    <h3>Extracted Text:</h3>
+    <pre>@ViewBag.ExtractedText</pre>
+}

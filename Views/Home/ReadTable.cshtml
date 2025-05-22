@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "ReadTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var table = ViewBag.Table as List<List<string>>;
+}
+
+<h2>Upload Document with Table</h2>
+<form asp-action="ReadTable" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".jpg,.png,.pdf" required />
+    <button type="submit">Extract Table</button>
+</form>
+
+@if (table != null && table.Any())
+{
+    <h3>Extracted Table:</h3>
+    <table class="table table-bordered table-striped">
+        @foreach (var row in table)
+        {
+            <tr>
+                @foreach (var cell in row)
+                {
+                    <td>@cell</td>
+                }
+            </tr>
+        }
+    </table>
+}
+

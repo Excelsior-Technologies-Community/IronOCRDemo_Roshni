@@ -245,6 +245,38 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\2022-01-08 (1).png",
+      "PackagePath": "staticwebassets\\uploads\\2022-01-08 (1).png"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\Barcode.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Barcode.jpg"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\Screenshot (5).png",
+      "PackagePath": "staticwebassets\\uploads\\Screenshot (5).png"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\barcode-icon_593228-280.avif",
+      "PackagePath": "staticwebassets\\uploads\\barcode-icon_593228-280.avif"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\barcode1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\barcode1.jpg"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\can..dfd.png",
+      "PackagePath": "staticwebassets\\uploads\\can..dfd.png"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\qr.jpg",
+      "PackagePath": "staticwebassets\\uploads\\qr.jpg"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\qr1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\qr1.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.IronOCRDemo.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

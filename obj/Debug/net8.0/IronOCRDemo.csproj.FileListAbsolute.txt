@@ -263,3 +263,4 @@ F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x86\native\libtesserac
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x86\native\osd.traineddata
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x86\native\pdf.ttf
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x86\native\pdf.ttx
+F:\Company Work\IronOCRDemo\obj\Debug\net8.0\IronOCRDemo.sourcelink.json

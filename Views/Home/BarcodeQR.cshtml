@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "BarcodeQR";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Upload Image</h2>
+
+<form asp-action="BarcodeQR" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required />
+    <button type="submit">Scan</button>
+</form>
+
+@if (ViewBag.BarcodeData != null)
+{
+    <h3>Detected Barcodes / QR Codes:</h3>
+    <ul>
+        @foreach (var barcode in ViewBag.BarcodeData)
+        {
+            <li>
+                <strong>Value:</strong> @barcode.Value
+            </li>
+        }
+
+    </ul>
+}
+else if (!string.IsNullOrEmpty(ViewBag.TextData))
+{
+    <p><strong>Text Detected:</strong> @ViewBag.TextData</p>
+}
+

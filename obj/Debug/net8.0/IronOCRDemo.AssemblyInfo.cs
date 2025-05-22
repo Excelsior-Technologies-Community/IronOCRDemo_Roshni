@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IronOCRDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3895ca91da535bde37eadedad8522e25abf0f402")]
 [assembly: System.Reflection.AssemblyProductAttribute("IronOCRDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IronOCRDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

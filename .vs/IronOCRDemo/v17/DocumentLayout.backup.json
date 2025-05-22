@@ -3,16 +3,35 @@
   "WorkspaceRootPath": "F:\\Company Work\\IronOCRDemo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|f:\\company work\\ironocrdemo\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|solutionrelative:views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|f:\\company work\\ironocrdemo\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|f:\\company work\\ironocrdemo\\views\\home\\readtable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|solutionrelative:views\\home\\readtable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|f:\\company work\\ironocrdemo\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|f:\\company work\\ironocrdemo\\views\\home\\rsdocument.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|solutionrelative:views\\home\\rsdocument.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Roshni Gamit\\AppData\\Local\\Temp\\.vsdbgsrc\\d5d03f19f5016920bb70f6ef3ae7af5f6e46b476b7d6881dc1096d2cdc4e249e\\ImageFormatManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|f:\\company work\\ironocrdemo\\views\\home\\barcodeqr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|solutionrelative:views\\home\\barcodeqr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|f:\\company work\\ironocrdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|f:\\company work\\ironocrdemo\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5792D9FD-8FD0-404D-95AA-35CCB29865D7}|IronOCRDemo.csproj|solutionrelative:views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Roshni Gamit\\.nuget\\packages\\ironocr\\2025.5.11\\README.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
@@ -25,8 +44,71 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReadTable.cshtml",
+              "DocumentMoniker": "F:\\Company Work\\IronOCRDemo\\Views\\Home\\ReadTable.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ReadTable.cshtml",
+              "ToolTip": "F:\\Company Work\\IronOCRDemo\\Views\\Home\\ReadTable.cshtml",
+              "RelativeToolTip": "Views\\Home\\ReadTable.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T12:20:20.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RSDocument.cshtml",
+              "DocumentMoniker": "F:\\Company Work\\IronOCRDemo\\Views\\Home\\RSDocument.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\RSDocument.cshtml",
+              "ToolTip": "F:\\Company Work\\IronOCRDemo\\Views\\Home\\RSDocument.cshtml",
+              "RelativeToolTip": "Views\\Home\\RSDocument.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T10:42:10.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ImageFormatManager.cs",
+              "DocumentMoniker": "C:\\Users\\Roshni Gamit\\AppData\\Local\\Temp\\.vsdbgsrc\\d5d03f19f5016920bb70f6ef3ae7af5f6e46b476b7d6881dc1096d2cdc4e249e\\ImageFormatManager.cs",
+              "ToolTip": "C:\\Users\\Roshni Gamit\\AppData\\Local\\Temp\\.vsdbgsrc\\d5d03f19f5016920bb70f6ef3ae7af5f6e46b476b7d6881dc1096d2cdc4e249e\\ImageFormatManager.cs [Read Only]",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAAAIgAAAACAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T10:32:03.433Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\Company Work\\IronOCRDemo\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "F:\\Company Work\\IronOCRDemo\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T10:00:31.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BarcodeQR.cshtml",
+              "DocumentMoniker": "F:\\Company Work\\IronOCRDemo\\Views\\Home\\BarcodeQR.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\BarcodeQR.cshtml",
+              "ToolTip": "F:\\Company Work\\IronOCRDemo\\Views\\Home\\BarcodeQR.cshtml",
+              "RelativeToolTip": "Views\\Home\\BarcodeQR.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwBYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T09:42:40.65Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -35,44 +117,43 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "F:\\Company Work\\IronOCRDemo\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwCgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-21T11:55:35.408Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "README.txt",
               "DocumentMoniker": "C:\\Users\\Roshni Gamit\\.nuget\\packages\\ironocr\\2025.5.11\\README.txt",
               "ToolTip": "C:\\Users\\Roshni Gamit\\.nuget\\packages\\ironocr\\2025.5.11\\README.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-21T11:54:53.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T11:54:53.162Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "F:\\Company Work\\IronOCRDemo\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "F:\\Company Work\\IronOCRDemo\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAALUAAAAAAAAAAAAAAL8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T11:51:23.859Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Create.cshtml",
               "DocumentMoniker": "F:\\Company Work\\IronOCRDemo\\Views\\Home\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Create.cshtml",
-              "ToolTip": "F:\\Company Work\\IronOCRDemo\\Views\\Home\\Create.cshtml*",
-              "RelativeToolTip": "Views\\Home\\Create.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ToolTip": "F:\\Company Work\\IronOCRDemo\\Views\\Home\\Create.cshtml",
+              "RelativeToolTip": "Views\\Home\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-21T11:42:49.074Z",
               "EditorCaption": ""
