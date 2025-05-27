@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "ReadPdf";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Upload PDF for OCR</h2>
+
+<form asp-action="ReadPdf" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Select PDF file:</label>
+        <input type="file" name="file" class="form-control" accept=".pdf" required />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Upload & Read</button>
+</form>
+
+@if (ViewBag.OCRText != null)
+{
+    <div class="mt-4">
+        <h4>OCR Result:</h4>
+        <pre>@ViewBag.OCRText</pre>
+
+        @if (ViewBag.Confidence != null)
+        {
+            <p><strong>Confidence:</strong> @ViewBag.Confidence</p>
+        }
+    </div>
+}

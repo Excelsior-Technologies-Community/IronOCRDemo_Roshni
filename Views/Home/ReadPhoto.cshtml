@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "ReadPhoto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ReadPhoto</h1>
+
+
+<form asp-action="ReadPhoto" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Select Image (.jpg, .png, .tiff)</label>
+        <input type="file" name="file" class="form-control" accept=".jpg,.jpeg,.png,.tiff" required />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Upload and Scan</button>
+</form>
+
+@if (ViewBag.Output != null)
+{
+    <h3 class="mt-4">Result:</h3>
+    <pre>@ViewBag.Output</pre>
+}

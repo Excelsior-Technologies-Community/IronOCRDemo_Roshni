@@ -9,6 +9,7 @@
       "IronOCRDemo/1.0.0": {
         "dependencies": {
           "IronOcr": "2025.5.11",
+          "IronOcr.Extensions.AdvancedScan": "2025.5.34533",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.7"
         },
         "runtime": {
@@ -735,6 +736,65 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "IronOcr.Extensions.AdvancedScan/2025.5.34533": {
+        "runtimeTargets": {
+          "runtimes/win-x64/native/Extensions.AdvancedScan.deployment.json": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/OcrInternals.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/openvino.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2024.6.0.17404"
+          },
+          "runtimes/win-x64/native/openvino_c.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2024.6.0.17404"
+          },
+          "runtimes/win-x64/native/openvino_intel_cpu_plugin.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2024.6.0.17404"
+          },
+          "runtimes/win-x64/native/openvino_ir_frontend.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2024.6.0.17404"
+          },
+          "runtimes/win-x64/native/openvino_paddle_frontend.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2024.6.0.17404"
+          },
+          "runtimes/win-x64/native/tbb12.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2021.2.5.0"
+          },
+          "runtimes/win-x64/native/tbbbind_2_5.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2021.2.5.0"
+          },
+          "runtimes/win-x64/native/tbbmalloc.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2021.2.5.0"
+          },
+          "runtimes/win-x64/native/tbbmalloc_proxy.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2021.2.5.0"
           }
         }
       },
@@ -2199,6 +2259,13 @@
       "sha512": "sha512-wizR/tN7rIgPELkDrShdvi0nt8V6rVwV1H8+pQtjUVxFcZw3/ikjOmUtmHT72GeJB8GEBRqCIxIVQ0VUPzb/jg==",
       "path": "ironocr/2025.5.11",
       "hashPath": "ironocr.2025.5.11.nupkg.sha512"
+    },
+    "IronOcr.Extensions.AdvancedScan/2025.5.34533": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-w/7c71Sna+LZCLlwu1uNp/sdzMPq3wZY0mqAuRcnkWqwLbRpA+BQwII3vl29FByS6xlwtnh7aLGORwUwhF7zKQ==",
+      "path": "ironocr.extensions.advancedscan/2025.5.34533",
+      "hashPath": "ironocr.extensions.advancedscan.2025.5.34533.nupkg.sha512"
     },
     "IronSoftware.Abstractions/2025.4.2": {
       "type": "package",

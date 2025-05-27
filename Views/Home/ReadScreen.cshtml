@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "ReadScreen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Upload Screenshot (.jpg, .png)</h2>
+
+<form asp-action="ReadScreen" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Select Image</label>
+        <input type="file" name="file" class="form-control" accept=".jpg,.jpeg,.png" required />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Scan Screenshot</button>
+</form>
+
+@if (ViewBag.Output != null)
+{
+    <h4 class="mt-4">OCR Result:</h4>
+    <pre>@ViewBag.Output</pre>
+}

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "ReadPassport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ReadPassport</h1>
+
+<form asp-action="ReadPassport" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Select Passport Image:</label>
+        <input type="file" name="passportImage" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Upload & Read</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger mt-3">@ViewBag.Error</div>
+}
+else if (ViewBag.GivenNames != null)
+{
+    <div class="mt-4">
+        <h4>Extracted Passport Details:</h4>
+        <p><strong>Given Names:</strong> @ViewBag.GivenNames</p>
+        <p><strong>Surname:</strong> @ViewBag.Surname</p>
+        <p><strong>Country:</strong> @ViewBag.Country</p>
+        <p><strong>Passport Number:</strong> @ViewBag.PassportNumber</p>
+        <p><strong>Date of Birth:</strong> @ViewBag.DateOfBirth</p>
+        <p><strong>Date of Expiry:</strong> @ViewBag.DateOfExpiry</p>
+    </div>
+}

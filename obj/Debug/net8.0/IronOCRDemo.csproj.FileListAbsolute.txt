@@ -264,3 +264,14 @@ F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x86\native\osd.trained
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x86\native\pdf.ttf
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x86\native\pdf.ttx
 F:\Company Work\IronOCRDemo\obj\Debug\net8.0\IronOCRDemo.sourcelink.json
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\Extensions.AdvancedScan.deployment.json
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\OcrInternals.dll
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\openvino.dll
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\openvino_c.dll
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\openvino_intel_cpu_plugin.dll
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\openvino_ir_frontend.dll
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\openvino_paddle_frontend.dll
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\tbb12.dll
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\tbbbind_2_5.dll
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\tbbmalloc.dll
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\tbbmalloc_proxy.dll

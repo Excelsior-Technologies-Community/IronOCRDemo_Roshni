@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "ReadLicensePlate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ReadLicensePlate</h1>
+
+<form asp-action="ReadLicensePlate" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".jpg,.png,.jpeg" required/>
+    <button type="submit">Read License Plate</button>
+</form>
+
+@if (ViewBag.LicensePlateText != null)
+{
+    <h3>Detected License Plate:</h3>
+    <p><strong>Text:</strong> @ViewBag.LicensePlateText</p>
+    <p><strong>Bounding Box:</strong> @ViewBag.LicensePlateBox</p>
+}
+@if (ViewBag.Error != null)
+{
+    <p class="text-danger">@ViewBag.Error</p>
+}

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="IronOcr" Version="2025.5.11" />
+    <PackageReference Include="IronOcr.Extensions.AdvancedScan" Version="2025.5.34533" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 

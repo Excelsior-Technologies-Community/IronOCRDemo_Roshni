@@ -788,6 +788,64 @@
           }
         }
       },
+      "IronOcr.Extensions.AdvancedScan/2025.5.34533": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/IronOcr.Extensions.AdvancedScan.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/Extensions.AdvancedScan.deployment.json": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/OcrInternals.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/openvino.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/openvino_c.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/openvino_intel_cpu_plugin.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/openvino_ir_frontend.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/openvino_paddle_frontend.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/tbb12.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/tbbbind_2_5.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/tbbmalloc.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/tbbmalloc_proxy.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
       "IronSoftware.Abstractions/2025.4.2": {
         "type": "package",
         "dependencies": {
@@ -3403,6 +3461,47 @@
         "runtimes/win-x86/native/osd.traineddata",
         "runtimes/win-x86/native/pdf.ttf",
         "runtimes/win-x86/native/pdf.ttx"
+      ]
+    },
+    "IronOcr.Extensions.AdvancedScan/2025.5.34533": {
+      "sha512": "w/7c71Sna+LZCLlwu1uNp/sdzMPq3wZY0mqAuRcnkWqwLbRpA+BQwII3vl29FByS6xlwtnh7aLGORwUwhF7zKQ==",
+      "type": "package",
+      "path": "ironocr.extensions.advancedscan/2025.5.34533",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net/IronOcr.Extensions.AdvancedScan.targets",
+        "build/netstandard2.0/IronOcr.Extensions.AdvancedScan.targets",
+        "buildTransitive/net/IronOcr.Extensions.AdvancedScan.targets",
+        "buildTransitive/netstandard2.0/IronOcr.Extensions.AdvancedScan.targets",
+        "docs/README.md",
+        "images/iron-logo-128.png",
+        "ironocr.extensions.advancedscan.2025.5.34533.nupkg.sha512",
+        "ironocr.extensions.advancedscan.nuspec",
+        "lib/netstandard2.0/_._",
+        "models/Detection/en-detection.pdiparams",
+        "models/Detection/en-detection.pdmodel",
+        "models/Detection/multilingual-detection.pdiparams",
+        "models/Detection/multilingual-detection.pdmodel",
+        "models/Recognition/Labels/ch_dict.txt",
+        "models/Recognition/Labels/en_dict.txt",
+        "models/Recognition/ch-recognition.pdiparams",
+        "models/Recognition/ch-recognition.pdmodel",
+        "models/Recognition/en-recognition.pdiparams",
+        "models/Recognition/en-recognition.pdmodel",
+        "models/Yolo/license-plate-detector.bin",
+        "models/Yolo/license-plate-detector.xml",
+        "runtimes/win-x64/native/Extensions.AdvancedScan.deployment.json",
+        "runtimes/win-x64/native/OcrInternals.dll",
+        "runtimes/win-x64/native/openvino.dll",
+        "runtimes/win-x64/native/openvino_c.dll",
+        "runtimes/win-x64/native/openvino_intel_cpu_plugin.dll",
+        "runtimes/win-x64/native/openvino_ir_frontend.dll",
+        "runtimes/win-x64/native/openvino_paddle_frontend.dll",
+        "runtimes/win-x64/native/tbb12.dll",
+        "runtimes/win-x64/native/tbbbind_2_5.dll",
+        "runtimes/win-x64/native/tbbmalloc.dll",
+        "runtimes/win-x64/native/tbbmalloc_proxy.dll"
       ]
     },
     "IronSoftware.Abstractions/2025.4.2": {
@@ -6611,6 +6710,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "IronOcr >= 2025.5.11",
+      "IronOcr.Extensions.AdvancedScan >= 2025.5.34533",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7"
     ]
   },
@@ -6667,6 +6767,10 @@
           "IronOcr": {
             "target": "Package",
             "version": "[2025.5.11, )"
+          },
+          "IronOcr.Extensions.AdvancedScan": {
+            "target": "Package",
+            "version": "[2025.5.34533, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",

@@ -38,8 +38,15 @@
                             <ul class="dropdown-menu" aria-labelledby="rsDocumentDropdown">
                                 <li><a class="dropdown-item" asp-controller="Home" asp-action="RSDocument">RSDocument</a></li>
                                  <li><a class="dropdown-item" asp-controller="Home" asp-action="ReadTable">ReadTable </a></li>
-                                @*@<li><a class="dropdown-item" asp-controller="Home" asp-action="ReadScan">Read Scanned Document</a></li> *@
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="ReadLicensePlate">ReadLicensePlate</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="ReadPassport">ReadPassport</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="ReadPhoto">Read Photo</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="ReadScreen">Read Screenshot</a></li>
+
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Tesseract" asp-action="ReadPdf">ReadPdf </a>
                         </li>
                     </ul>
                 </div>

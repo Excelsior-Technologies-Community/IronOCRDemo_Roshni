@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mqhKf99Ucho=",
+  "dgSpecHash": "+L7jC3AAFi0=",
   "success": true,
   "projectFilePath": "F:\\Company Work\\IronOCRDemo\\IronOCRDemo.csproj",
   "expectedPackageFiles": [
@@ -60,6 +60,7 @@
     "C:\\Users\\Roshni Gamit\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\Roshni Gamit\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
     "C:\\Users\\Roshni Gamit\\.nuget\\packages\\ironocr\\2025.5.11\\ironocr.2025.5.11.nupkg.sha512",
+    "C:\\Users\\Roshni Gamit\\.nuget\\packages\\ironocr.extensions.advancedscan\\2025.5.34533\\ironocr.extensions.advancedscan.2025.5.34533.nupkg.sha512",
     "C:\\Users\\Roshni Gamit\\.nuget\\packages\\ironsoftware.abstractions\\2025.4.2\\ironsoftware.abstractions.2025.4.2.nupkg.sha512",
     "C:\\Users\\Roshni Gamit\\.nuget\\packages\\ironsoftware.common\\2025.3.1\\ironsoftware.common.2025.3.1.nupkg.sha512",
     "C:\\Users\\Roshni Gamit\\.nuget\\packages\\ironsoftware.drawing.abstractions\\2025.4.2\\ironsoftware.drawing.abstractions.2025.4.2.nupkg.sha512",

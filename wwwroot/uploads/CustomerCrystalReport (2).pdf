@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customers Data - OnlineCafe_Restaurant_Management</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=q-0Auvoswh1wlddUn7yxRLPhCtaUSq5FgJAtc7LyR2o" />
+    <link rel="stylesheet" href="/OnlineCafe_Restaurant_Management.styles.css?v=Qqdch8OEs4kPiHDAIRzihw1VcbApzxZ3G02Ud811UKU" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/OCRM_logo.jpg" alt="Online Cafe & Restaurant Logo" style="height: 40px; margin-right: 10px;" />
+                    Online Cafe & Restaurant
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Reservation/Tables">Tables Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Admin/MenuData">Menu Management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Admin/CustomersData">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Home/LoginForm">Payments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Admin/RatingDta">Rating Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Home/RegisterForm">Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-danger text-white" href="/User/Logout">Logout</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+                <div class="alert alert-danger">Crystal Report (.rpt) file not found.</div>
+
+<!-- Styles -->
+<link rel="stylesheet" href="/css/Reports/Users.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.bootstrap5.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap5.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<div class="container-fluid mt-4">
+    <div class="row mb-3">
+        <div class="col-md-8">
+            <h4>Customer Data</h4>
+            <small class="text-muted">Dashboard > Customer Data</small>
+        </div>
+        <div class="col-md-4 text-end">
+            <a href="/Admin/AddCustomer" class="btn btn-primary">Add New</a>
+        </div>
+    </div>
+
+    <div class="card shadow p-4">
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <label>From Date</label>
+                <input type="date" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <label>To Date</label>
+                <input type="date" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <label>Status</label>
+                <select class="form-control">
+                    <option value="">Select Status</option>
+                    <option value="1">Active</option>
+                    <option value="0">Inactive</option>
+                </select>
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <button class="btn btn-success me-2">Search</button>
+                <button class="btn btn-outline-secondary">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Generate Report Section for CustomersData -->
+        <div class="mb-3">
+            <form method="post" class="form-inline" action="/Admin/GenerateCustomersReport">
+                <label for="customersReportFormat" class="mr-2">Generate Customers Report:</label>
+                <select name="format" id="customersReportFormat" class="form-control mr-2" required>
+                    <option value="">--Select Format--</option>
+                    <option value="img">Image</option>
+                    <option value="pdf">PDF</option>
+                    <option value="excel">Excel</option>
+                    <option value="csv">CSV</option>
+                    <option value="crystal">Crystal PDF</option>
+                </select>
+                <button type="submit" class="btn btn-success">Generate</button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LbTFCWEEzZJvZARRzUzCWRlWRWfLg1rRIky_KEVsIxkj1F6pKnXGBYwc1Ei9c7PRiaA0QCChAdZWlkbDcS1pU6hYx7iFllOw-d4CZ-mcVYAhFUGAF3NS-FkeCpxdMcaxX6BeMHu5C6Y2mZ0Bq9sMIg" /></form>
+        </div>
+
+        <!-- Import CustomersData Excel Form -->
+        <div class="mb-3">
+            <form enctype="multipart/form-data" method="post" class="form-inline" action="/Admin/ImportCustomerExcel">
+                <label for="customersExcelFile" class="mr-2">Import Customers from Excel:</label>
+                <input type="file" name="excelFile" id="customersExcelFile" class="form-control mr-2" accept=".xlsx" required />
+                <button type="submit" class="btn btn-info">Upload & Import</button>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LbTFCWEEzZJvZARRzUzCWRlWRWfLg1rRIky_KEVsIxkj1F6pKnXGBYwc1Ei9c7PRiaA0QCChAdZWlkbDcS1pU6hYx7iFllOw-d4CZ-mcVYAhFUGAF3NS-FkeCpxdMcaxX6BeMHu5C6Y2mZ0Bq9sMIg" /></form>
+        </div>
+
+        <table id="customerTable" class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Profile</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Order Count</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                        <tr>
+                            <td class="text-center">
+                                    <span class="text-muted">No Image</span>
+                            </td>
+                            <td>Zinal MukeshBhai Gamit</td>
+                            <td>zinal@gmail.com</td>
+                            <td>2356889124</td>
+                            <td>Female</td>
+                            <td>AT.&amp;PO. : BHADBHUNJA(LONJA FALIYU),&#xD;&#xA;TA. : UCHCHHAL, DIST : TAPI</td>
+                            <td>
+                                    <span>0</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/1" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/1" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":1,"FirstName":"Zinal","MiddleName":"MukeshBhai","LastName":"Gamit","ProfileImagePath":null,"ProfileImage":null,"Address":"AT.&PO. : BHADBHUNJA(LONJA FALIYU),\r\nTA. : UCHCHHAL, DIST : TAPI","CountryId":1,"Country":null,"StateId":15,"State":null,"CityId":16,"City":null,"Phone":"2356889124","Gender":"Female","Email":"zinal@gmail.com","PasswordHash":"Zinal@456","Flag":"A","CreateUser":null,"CreateDate":null,"UpdateUser":null,"UpdateDate":null,"CaptchaCode":"znI2u","CaptchaHashKey":"1f373c6a58e0fc6eb2d507e021e8b94809d0e42f780f83b122f78f8387ade3ba","CaptchaExpiry":"2025-04-02T12:05:38","CaptchaStatus":"Active","UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":1,"FirstName":"Zinal","MiddleName":"MukeshBhai","LastName":"Gamit","ProfileImagePath":null,"ProfileImage":null,"Address":"AT.&PO. : BHADBHUNJA(LONJA FALIYU),\r\nTA. : UCHCHHAL, DIST : TAPI","CountryId":1,"Country":null,"StateId":15,"State":null,"CityId":16,"City":null,"Phone":"2356889124","Gender":"Female","Email":"zinal@gmail.com","PasswordHash":"Zinal@456","Flag":"A","CreateUser":null,"CreateDate":null,"UpdateUser":null,"UpdateDate":null,"CaptchaCode":"znI2u","CaptchaHashKey":"1f373c6a58e0fc6eb2d507e021e8b94809d0e42f780f83b122f78f8387ade3ba","CaptchaExpiry":"2025-04-02T12:05:38","CaptchaStatus":"Active","UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                    <img src="/uploads//Images/uploads/b670cabc-aa39-47a8-9aaa-67e6dada3b57_Basil, Holy (Tulsi).jpg" width="50" height="50" class="rounded-circle border" />
+                            </td>
+                            <td>Vaibhavi Jiteshbhai Chaudhari</td>
+                            <td>vaibhavi@gmail.com</td>
+                            <td>2356889128</td>
+                            <td>Female</td>
+                            <td>AT.&amp;PO. : BHADBHUNJA(LONJA FALIYU),&#xD;&#xA;TA. : UCHCHHAL, DIST : TAPI</td>
+                            <td>
+                                    <span>0</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/2" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/2" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":2,"FirstName":"Vaibhavi","MiddleName":"Jiteshbhai","LastName":"Chaudhari","ProfileImagePath":null,"ProfileImage":"/Images/uploads/b670cabc-aa39-47a8-9aaa-67e6dada3b57_Basil, Holy (Tulsi).jpg","Address":"AT.&PO. : BHADBHUNJA(LONJA FALIYU),\r\nTA. : UCHCHHAL, DIST : TAPI","CountryId":1,"Country":null,"StateId":17,"State":null,"CityId":18,"City":null,"Phone":"2356889128","Gender":"Female","Email":"vaibhavi@gmail.com","PasswordHash":"Vibhu@123","Flag":"A","CreateUser":null,"CreateDate":null,"UpdateUser":null,"UpdateDate":null,"CaptchaCode":"TU8tR","CaptchaHashKey":"ec1564de0c39cb2e835d75cb0957e78cfb7fd43515a7cf70c40e579213e7ec99","CaptchaExpiry":"2025-04-02T12:10:32","CaptchaStatus":"Active","UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":2,"FirstName":"Vaibhavi","MiddleName":"Jiteshbhai","LastName":"Chaudhari","ProfileImagePath":null,"ProfileImage":"/Images/uploads/b670cabc-aa39-47a8-9aaa-67e6dada3b57_Basil, Holy (Tulsi).jpg","Address":"AT.&PO. : BHADBHUNJA(LONJA FALIYU),\r\nTA. : UCHCHHAL, DIST : TAPI","CountryId":1,"Country":null,"StateId":17,"State":null,"CityId":18,"City":null,"Phone":"2356889128","Gender":"Female","Email":"vaibhavi@gmail.com","PasswordHash":"Vibhu@123","Flag":"A","CreateUser":null,"CreateDate":null,"UpdateUser":null,"UpdateDate":null,"CaptchaCode":"TU8tR","CaptchaHashKey":"ec1564de0c39cb2e835d75cb0957e78cfb7fd43515a7cf70c40e579213e7ec99","CaptchaExpiry":"2025-04-02T12:10:32","CaptchaStatus":"Active","UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                    <img src="/uploads//Images/uploads/34cb011b-4530-4a91-970c-c561b2ba4600_Belladonna.jpg" width="50" height="50" class="rounded-circle border" />
+                            </td>
+                            <td>Kinjal MukeshBhai Chaudhari</td>
+                            <td>kinjal@gmail.com</td>
+                            <td>2356889563</td>
+                            <td>Female</td>
+                            <td>AT.&amp;PO. : BHADBHUNJA(LONJA FALIYU),&#xD;&#xA;TA. : UCHCHHAL, DIST : TAPI</td>
+                            <td>
+                                    <span>0</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/3" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/3" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":3,"FirstName":"Kinjal","MiddleName":"MukeshBhai","LastName":"Chaudhari","ProfileImagePath":null,"ProfileImage":"/Images/uploads/34cb011b-4530-4a91-970c-c561b2ba4600_Belladonna.jpg","Address":"AT.&PO. : BHADBHUNJA(LONJA FALIYU),\r\nTA. : UCHCHHAL, DIST : TAPI","CountryId":1,"Country":null,"StateId":17,"State":null,"CityId":18,"City":null,"Phone":"2356889563","Gender":"Female","Email":"kinjal@gmail.com","PasswordHash":"Kinjal@456","Flag":"A","CreateUser":null,"CreateDate":null,"UpdateUser":null,"UpdateDate":null,"CaptchaCode":"8VTf0","CaptchaHashKey":"fbaca6dd8d40e2225eb3f4eca9c9bfcc33bb86e074ecb43b884a951a70c78f74","CaptchaExpiry":"2025-04-02T12:17:31","CaptchaStatus":"Active","UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":3,"FirstName":"Kinjal","MiddleName":"MukeshBhai","LastName":"Chaudhari","ProfileImagePath":null,"ProfileImage":"/Images/uploads/34cb011b-4530-4a91-970c-c561b2ba4600_Belladonna.jpg","Address":"AT.&PO. : BHADBHUNJA(LONJA FALIYU),\r\nTA. : UCHCHHAL, DIST : TAPI","CountryId":1,"Country":null,"StateId":17,"State":null,"CityId":18,"City":null,"Phone":"2356889563","Gender":"Female","Email":"kinjal@gmail.com","PasswordHash":"Kinjal@456","Flag":"A","CreateUser":null,"CreateDate":null,"UpdateUser":null,"UpdateDate":null,"CaptchaCode":"8VTf0","CaptchaHashKey":"fbaca6dd8d40e2225eb3f4eca9c9bfcc33bb86e074ecb43b884a951a70c78f74","CaptchaExpiry":"2025-04-02T12:17:31","CaptchaStatus":"Active","UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                    <img src="/uploads//Images/uploads/e3ef1281-3343-4ec4-b62d-119c8d0ee591_Brahmi.jpg" width="50" height="50" class="rounded-circle border" />
+                            </td>
+                            <td>Ayushi MukeshBhai Gamit</td>
+                            <td>ayushi@gmail.com</td>
+                            <td>2356889129</td>
+                            <td>Female</td>
+                            <td>AT.&amp;PO. : BHADBHUNJA(LONJA FALIYU),&#xD;&#xA;TA. : UCHCHHAL, DIST : TAPI</td>
+                            <td>
+                                    <span>7</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/4" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/4" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":4,"FirstName":"Ayushi","MiddleName":"MukeshBhai","LastName":"Gamit","ProfileImagePath":null,"ProfileImage":"/Images/uploads/e3ef1281-3343-4ec4-b62d-119c8d0ee591_Brahmi.jpg","Address":"AT.&PO. : BHADBHUNJA(LONJA FALIYU),\r\nTA. : UCHCHHAL, DIST : TAPI","CountryId":1,"Country":null,"StateId":15,"State":null,"CityId":16,"City":null,"Phone":"2356889129","Gender":"Female","Email":"ayushi@gmail.com","PasswordHash":"Ayushi@123","Flag":"A","CreateUser":null,"CreateDate":null,"UpdateUser":null,"UpdateDate":null,"CaptchaCode":"104Ip","CaptchaHashKey":"aa0fbf998df83887bc9cd1c77c95138f89d4c0fe89cef95d589af8b399024206","CaptchaExpiry":"2025-04-02T12:27:59","CaptchaStatus":"Active","UnreadCount":0,"Orders":[{"OrderId":1,"UserId":4,"TotalAmount":2.99,"BankName":"edsds","TransactionId":"sdsdcsdc","OrderDate":"2025-04-29T16:18:23.983"},{"OrderId":2,"UserId":4,"TotalAmount":2.99,"BankName":"edsds","TransactionId":"sdsdcsdc","OrderDate":"2025-04-29T16:18:27.14"},{"OrderId":3,"UserId":4,"TotalAmount":2.99,"BankName":"HDFC Bank","TransactionId":"TXN20250429ABC123","OrderDate":"2025-04-29T16:20:55.957"},{"OrderId":4,"UserId":4,"TotalAmount":2.99,"BankName":"HDFC Bank","TransactionId":"TXN20250429ABC123","OrderDate":"2025-04-29T16:20:57.847"},{"OrderId":5,"UserId":4,"TotalAmount":2.99,"BankName":"HDFC Bank","TransactionId":"TXN20250429ABC123","OrderDate":"2025-04-29T16:27:14.73"},{"OrderId":6,"UserId":4,"TotalAmount":2.99,"BankName":"HDFC Bank","TransactionId":"TXN20250429ABC123","OrderDate":"2025-04-29T16:32:16.053"},{"OrderId":7,"UserId":4,"TotalAmount":2.99,"BankName":"HDFC Bank","TransactionId":"TXN20250429ABC456","OrderDate":"2025-04-29T16:34:55.233"}]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":4,"FirstName":"Ayushi","MiddleName":"MukeshBhai","LastName":"Gamit","ProfileImagePath":null,"ProfileImage":"/Images/uploads/e3ef1281-3343-4ec4-b62d-119c8d0ee591_Brahmi.jpg","Address":"AT.&PO. : BHADBHUNJA(LONJA FALIYU),\r\nTA. : UCHCHHAL, DIST : TAPI","CountryId":1,"Country":null,"StateId":15,"State":null,"CityId":16,"City":null,"Phone":"2356889129","Gender":"Female","Email":"ayushi@gmail.com","PasswordHash":"Ayushi@123","Flag":"A","CreateUser":null,"CreateDate":null,"UpdateUser":null,"UpdateDate":null,"CaptchaCode":"104Ip","CaptchaHashKey":"aa0fbf998df83887bc9cd1c77c95138f89d4c0fe89cef95d589af8b399024206","CaptchaExpiry":"2025-04-02T12:27:59","CaptchaStatus":"Active","UnreadCount":0,"Orders":[{"OrderId":1,"UserId":4,"TotalAmount":2.99,"BankName":"edsds","TransactionId":"sdsdcsdc","OrderDate":"2025-04-29T16:18:23.983"},{"OrderId":2,"UserId":4,"TotalAmount":2.99,"BankName":"edsds","TransactionId":"sdsdcsdc","OrderDate":"2025-04-29T16:18:27.14"},{"OrderId":3,"UserId":4,"TotalAmount":2.99,"BankName":"HDFC Bank","TransactionId":"TXN20250429ABC123","OrderDate":"2025-04-29T16:20:55.957"},{"OrderId":4,"UserId":4,"TotalAmount":2.99,"BankName":"HDFC Bank","TransactionId":"TXN20250429ABC123","OrderDate":"2025-04-29T16:20:57.847"},{"OrderId":5,"UserId":4,"TotalAmount":2.99,"BankName":"HDFC Bank","TransactionId":"TXN20250429ABC123","OrderDate":"2025-04-29T16:27:14.73"},{"OrderId":6,"UserId":4,"TotalAmount":2.99,"BankName":"HDFC Bank","TransactionId":"TXN20250429ABC123","OrderDate":"2025-04-29T16:32:16.053"},{"OrderId":7,"UserId":4,"TotalAmount":2.99,"BankName":"HDFC Bank","TransactionId":"TXN20250429ABC456","OrderDate":"2025-04-29T16:34:55.233"}]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                    <span class="text-muted">No Image</span>
+                            </td>
+                            <td>2 Vaibhavi Jiteshbhai</td>
+                            <td>Chaudhari</td>
+                            <td>/Images/uploads</td>
+                            <td>AT.&amp;PO. : </td>
+                            <td>1</td>
+                            <td>
+                                    <span>0</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/10" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/10" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":10,"FirstName":"2","MiddleName":"Vaibhavi","LastName":"Jiteshbhai","ProfileImagePath":null,"ProfileImage":null,"Address":"1","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"/Images/uploads","Gender":"AT.&PO. : ","Email":"Chaudhari","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:34:59.05","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":10,"FirstName":"2","MiddleName":"Vaibhavi","LastName":"Jiteshbhai","ProfileImagePath":null,"ProfileImage":null,"Address":"1","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"/Images/uploads","Gender":"AT.&PO. : ","Email":"Chaudhari","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:34:59.05","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                    <span class="text-muted">No Image</span>
+                            </td>
+                            <td>5 Ravi Vijaybhai</td>
+                            <td>Patel</td>
+                            <td>NULL</td>
+                            <td>AT.&amp;PO. : </td>
+                            <td>India</td>
+                            <td>
+                                    <span>0</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/12" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/12" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":12,"FirstName":"5","MiddleName":"Ravi","LastName":"Vijaybhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"NULL","Gender":"AT.&PO. : ","Email":"Patel","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:37:52.747","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":12,"FirstName":"5","MiddleName":"Ravi","LastName":"Vijaybhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"NULL","Gender":"AT.&PO. : ","Email":"Patel","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:37:52.747","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                    <span class="text-muted">No Image</span>
+                            </td>
+                            <td>5 Ravi Vijaybhai</td>
+                            <td>Patels</td>
+                            <td>NULL</td>
+                            <td>AT.&amp;PO. : </td>
+                            <td>India</td>
+                            <td>
+                                    <span>0</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/15" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/15" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":15,"FirstName":"5","MiddleName":"Ravi","LastName":"Vijaybhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"NULL","Gender":"AT.&PO. : ","Email":"Patels","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":15,"FirstName":"5","MiddleName":"Ravi","LastName":"Vijaybhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"NULL","Gender":"AT.&PO. : ","Email":"Patels","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                    <span class="text-muted">No Image</span>
+                            </td>
+                            <td>6 Anjali Vijaybhai</td>
+                            <td>gamit</td>
+                            <td>/Images/uploads</td>
+                            <td>AT.&amp;PO. : </td>
+                            <td>India</td>
+                            <td>
+                                    <span>0</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/16" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/16" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":16,"FirstName":"6","MiddleName":"Anjali","LastName":"Vijaybhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"/Images/uploads","Gender":"AT.&PO. : ","Email":"gamit","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":16,"FirstName":"6","MiddleName":"Anjali","LastName":"Vijaybhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"/Images/uploads","Gender":"AT.&PO. : ","Email":"gamit","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                    <span class="text-muted">No Image</span>
+                            </td>
+                            <td>7 Akash Hemantbhai</td>
+                            <td>Sharma</td>
+                            <td>/Images/uploads</td>
+                            <td>AT.&amp;PO. : </td>
+                            <td>India</td>
+                            <td>
+                                    <span>0</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/17" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/17" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":17,"FirstName":"7","MiddleName":"Akash","LastName":"Hemantbhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"/Images/uploads","Gender":"AT.&PO. : ","Email":"Sharma","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":17,"FirstName":"7","MiddleName":"Akash","LastName":"Hemantbhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"/Images/uploads","Gender":"AT.&PO. : ","Email":"Sharma","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                    <span class="text-muted">No Image</span>
+                            </td>
+                            <td>8 Rina Manojbhai</td>
+                            <td>gavit</td>
+                            <td>NULL</td>
+                            <td>AT.&amp;PO. : </td>
+                            <td>India</td>
+                            <td>
+                                    <span>0</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/18" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/18" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":18,"FirstName":"8","MiddleName":"Rina","LastName":"Manojbhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"NULL","Gender":"AT.&PO. : ","Email":"gavit","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":18,"FirstName":"8","MiddleName":"Rina","LastName":"Manojbhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"NULL","Gender":"AT.&PO. : ","Email":"gavit","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                    <span class="text-muted">No Image</span>
+                            </td>
+                            <td>9 Samir Chandranbhai</td>
+                            <td>Desai</td>
+                            <td>/Images/uploads</td>
+                            <td>AT.&amp;PO. : </td>
+                            <td>India</td>
+                            <td>
+                                    <span>0</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/19" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/19" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":19,"FirstName":"9","MiddleName":"Samir","LastName":"Chandranbhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"/Images/uploads","Gender":"AT.&PO. : ","Email":"Desai","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":19,"FirstName":"9","MiddleName":"Samir","LastName":"Chandranbhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"/Images/uploads","Gender":"AT.&PO. : ","Email":"Desai","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                    <span class="text-muted">No Image</span>
+                            </td>
+                            <td>10 Pratik Sureshbhai</td>
+                            <td>Shah</td>
+                            <td>/Images/uploads</td>
+                            <td>AT.&amp;PO. : </td>
+                            <td>India</td>
+                            <td>
+                                    <span>0</span> <!-- Show order count -->
+                            </td>
+                            <td>
+                                <a href="/Admin/UserEdit/20" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/UserDelete/20" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                <button type="button" class="btn btn-info btn-sm show-more-btn" data-user='{"UserId":20,"FirstName":"10","MiddleName":"Pratik","LastName":"Sureshbhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"/Images/uploads","Gender":"AT.&PO. : ","Email":"Shah","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-circle-info"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm show-orders-btn" data-user='{"UserId":20,"FirstName":"10","MiddleName":"Pratik","LastName":"Sureshbhai","ProfileImagePath":null,"ProfileImage":null,"Address":"India","CountryId":0,"Country":null,"StateId":0,"State":null,"CityId":0,"City":null,"Phone":"/Images/uploads","Gender":"AT.&PO. : ","Email":"Shah","PasswordHash":"DefaultPassword123","Flag":null,"CreateUser":null,"CreateDate":"2025-05-05T16:41:05.117","UpdateUser":null,"UpdateDate":null,"CaptchaCode":null,"CaptchaHashKey":null,"CaptchaExpiry":null,"CaptchaStatus":null,"UnreadCount":0,"Orders":[]}'>
+                                    <i class="fas fa-box"></i> Orders
+                                </button>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="moreModal" tabindex="-1" aria-labelledby="moreModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="moreModalLabel">User Full Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered mb-0">
+                    <tbody id="modalDetails"></tbody>
+                </table>
+                <!-- Orders Details Section -->
+                <div id="orderDetails" class="mt-4">
+                    <h5>Order Details</h5>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Date</th>
+                                <th>Total Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordersTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
+<script>
+    $(function () {
+        $('#customerTable').DataTable({
+            responsive: true,
+            dom: "<'row mb-3'<'col-md-6'l><'col-md-6 text-end'B>>" +
+                "<'row'<'col-sm-12'tr>>" +
+                "<'row mt-2'<'col-sm-5'i><'col-sm-7'p>>",
+            pageLength: 50,
+            lengthMenu: [[50, 100, 150, 200], [50, 100, 150, 200]],
+            buttons: [
+                { extend: 'copyHtml5', text: 'Copy', className: 'btn btn-outline-primary btn-sm me-1' },
+                { extend: 'excelHtml5', text: 'Excel', className: 'btn btn-outline-success btn-sm me-1' },
+                { extend: 'csvHtml5', text: 'CSV', className: 'btn btn-outline-info btn-sm me-1' },
+                { extend: 'pdfHtml5', text: 'PDF', className: 'btn btn-outline-danger btn-sm me-1' },
+                { extend: 'print', text: 'Print', className: 'btn btn-outline-dark btn-sm' }
+            ]
+        });
+
+        $('.show-orders-btn').click(function () {
+            const user = $(this).data('user');
+            const formatDate = dateStr => dateStr ? dateStr.split('T')[0] : 'N/A';
+
+            let ordersHtml = '';
+            if (user.Orders && user.Orders.length > 0) {
+                user.Orders.forEach(order => {
+                    ordersHtml += `
+                    <tr>
+                        <td>${order.OrderId}</td>
+                        <td>${formatDate(order.OrderDate)}</td>
+                        <td>${order.TotalAmount}</td>
+                        <td>${order.Status}</td>
+                    </tr>`;
+                });
+            } else {
+                ordersHtml = `<tr><td colspan="4" class="text-center text-muted">No orders found</td></tr>`;
+            }
+
+            // Reuse customer details in modalDetails
+            const html = `
+            <tr><th>Full Name</th><td>${user.FirstName ?? ''} ${user.MiddleName ?? ''} ${user.LastName ?? ''}</td></tr>
+            <tr><th>Email</th><td>${user.Email ?? 'N/A'}</td></tr>
+            <tr><th>Phone</th><td>${user.Phone ?? 'N/A'}</td></tr>
+            <tr><th>Gender</th><td>${user.Gender ?? 'N/A'}</td></tr>
+        `;
+
+            $('#modalDetails').html(html);
+            $('#ordersTable').html(ordersHtml);
+            $('#orderDetails').show(); // Show orders section
+            $('#moreModal').modal('show');
+        });
+
+    });
+</script>
+
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - OnlineCafe_Restaurant_Management - <a href="/Home/Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo"></script>
+    
+</body>
+</html>
