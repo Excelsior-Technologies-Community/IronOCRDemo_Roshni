@@ -197,8 +197,6 @@ F:\Company Work\IronOCRDemo\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspace
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
-F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 F:\Company Work\IronOCRDemo\obj\Debug\net8.0\IronOCRDemo.csproj.AssemblyReference.cache
@@ -275,3 +273,5 @@ F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\tbb12.dll
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\tbbbind_2_5.dll
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\tbbmalloc.dll
 F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win-x64\native\tbbmalloc_proxy.dll
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\System.Private.Windows.Core.dll
+F:\Company Work\IronOCRDemo\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll

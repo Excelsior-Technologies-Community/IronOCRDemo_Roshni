@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "RegionOcr";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>OCR a Region of an Image</h2>
+
+<form asp-action="RegionOcr" asp-controller="Formats" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Upload Image:</label>
+        <input type="file" name="imageFile" required accept="image/*" />
+    </div>
+    <br />
+    <div>
+        <label>X:</label>
+        <input type="number" name="x" required />
+        <label>Y:</label>
+        <input type="number" name="y" required />
+        <label>Width:</label>
+        <input type="number" name="width" required />
+        <label>Height:</label>
+        <input type="number" name="height" required />
+    </div>
+    <br />
+    <button type="submit">Extract Region Text</button>
+</form>
+
+@if (ViewBag.OcrText != null)
+{
+    <hr />
+    <h4>Extracted Text:</h4>
+    <pre>@ViewBag.OcrText</pre>
+
+    @if (ViewBag.ImagePath != null)
+    {
+        <h4>Image Preview:</h4>
+        <img src="@ViewBag.ImagePath" style="max-width: 400px;" />
+    }
+}

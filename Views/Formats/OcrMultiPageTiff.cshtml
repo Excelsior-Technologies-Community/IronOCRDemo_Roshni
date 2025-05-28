@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "OcrMultiPageTiff";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>OCR for MultiPage TIFF</h2>
+
+<form asp-action="OcrMultiPageTiff" asp-controller="Formats" method="post" enctype="multipart/form-data">
+    <label>Select MultiPage TIFF File:</label>
+    <input type="file" name="tiffFile" accept=".tif,.tiff" required />
+    <br /><br />
+    <button type="submit">Run OCR</button>
+</form>
+
+<br />
+
+@if (ViewBag.OcrText != null)
+{
+    <h3>OCR Result:</h3>
+    <pre>@ViewBag.OcrText</pre>
+}

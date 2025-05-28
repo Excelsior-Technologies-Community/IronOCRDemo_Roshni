@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "InputClass";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Upload Image for OCR</h2>
+
+<form asp-controller="Formats" asp-action="InputClass" method="post" enctype="multipart/form-data">
+    <div>
+        <input type="file" name="imageFile" accept="image/*" required />
+        <button type="submit">Upload and Extract Text</button>
+    </div>
+</form>
+
+@if (ViewBag.OcrText != null)
+{
+    <hr />
+    <h4>Extracted Text:</h4>
+    <pre>@ViewBag.OcrText</pre>
+
+    @if (ViewBag.ImagePath != null)
+    {
+        <h4>Uploaded Image:</h4>
+        <img src="@ViewBag.ImagePath" style="max-width: 400px;" />
+    }
+}

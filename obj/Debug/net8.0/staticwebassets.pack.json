@@ -265,16 +265,40 @@
       "PackagePath": "staticwebassets\\uploads\\ERD_Restaurant_System.png"
     },
     {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\FeedbackReport.pdf",
+      "PackagePath": "staticwebassets\\uploads\\FeedbackReport.pdf"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\G1.png",
+      "PackagePath": "staticwebassets\\uploads\\G1.png"
+    },
+    {
       "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\H_Report.pdf",
       "PackagePath": "staticwebassets\\uploads\\H_Report.pdf"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\R 25.pdf",
+      "PackagePath": "staticwebassets\\uploads\\R 25.pdf"
     },
     {
       "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\Report_food.pdf",
       "PackagePath": "staticwebassets\\uploads\\Report_food.pdf"
     },
     {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\Screenshot (11).png",
+      "PackagePath": "staticwebassets\\uploads\\Screenshot (11).png"
+    },
+    {
       "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\Screenshot (21).png",
       "PackagePath": "staticwebassets\\uploads\\Screenshot (21).png"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\Screenshot (22).png",
+      "PackagePath": "staticwebassets\\uploads\\Screenshot (22).png"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\Screenshot (39).pdf",
+      "PackagePath": "staticwebassets\\uploads\\Screenshot (39).pdf"
     },
     {
       "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\Screenshot (5).png",
@@ -293,6 +317,14 @@
       "PackagePath": "staticwebassets\\uploads\\Untitled.jpg"
     },
     {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\abc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\abc.jpg"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\about_us_video.png",
+      "PackagePath": "staticwebassets\\uploads\\about_us_video.png"
+    },
+    {
       "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\barcode-icon_593228-280.avif",
       "PackagePath": "staticwebassets\\uploads\\barcode-icon_593228-280.avif"
     },
@@ -305,6 +337,10 @@
       "PackagePath": "staticwebassets\\uploads\\bg.jpg"
     },
     {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\blog2.png",
+      "PackagePath": "staticwebassets\\uploads\\blog2.png"
+    },
+    {
       "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\can..dfd.png",
       "PackagePath": "staticwebassets\\uploads\\can..dfd.png"
     },
@@ -313,8 +349,16 @@
       "PackagePath": "staticwebassets\\uploads\\datadictonary.png"
     },
     {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\dfd.png",
+      "PackagePath": "staticwebassets\\uploads\\dfd.png"
+    },
+    {
       "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\expert.png",
       "PackagePath": "staticwebassets\\uploads\\expert.png"
+    },
+    {
+      "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\file_example_TIFF_5MB.tiff",
+      "PackagePath": "staticwebassets\\uploads\\file_example_TIFF_5MB.tiff"
     },
     {
       "Id": "F:\\Company Work\\IronOCRDemo\\wwwroot\\uploads\\lp1.png",

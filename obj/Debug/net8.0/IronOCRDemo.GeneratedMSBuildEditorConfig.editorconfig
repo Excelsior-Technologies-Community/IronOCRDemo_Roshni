@@ -26,6 +26,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\Company Work\IronOCRDemo
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/Company Work/IronOCRDemo/Views/Formats/InputClass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWF0c1xJbnB1dENsYXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/IronOCRDemo/Views/Formats/OcrDraw.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWF0c1xPY3JEcmF3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/IronOCRDemo/Views/Formats/OcrMultiPageTiff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWF0c1xPY3JNdWx0aVBhZ2VUaWZmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Company Work/IronOCRDemo/Views/Formats/RegionOcr.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWF0c1xSZWdpb25PY3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Company Work/IronOCRDemo/Views/Home/BarcodeQR.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCYXJjb2RlUVIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

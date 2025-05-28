@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "OcrDraw";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>OCR Drawing Region</h2>
+
+<form asp-action="OcrDraw" asp-controller="Formats" method="post" enctype="multipart/form-data">
+    <label>Select Image:</label>
+    <input type="file" name="imageFile" id="imageFile" required />
+    <br /><br />
+    <input type="hidden" name="x" id="x" />
+    <input type="hidden" name="y" id="y" />
+    <input type="hidden" name="width" id="width" />
+    <input type="hidden" name="height" id="height" />
+    <button type="submit">Submit OCR</button>
+</form>
+
+<br />
+
+<div style="position: relative; display: inline-block;">
+    <img id="previewImage" style="max-width: 100%; border: 1px solid #ccc;" />
+    <canvas id="canvas" style="position: absolute; top: 0; left: 0;"></canvas>
+</div>
+
+<script>
+    let image = document.getElementById('previewImage');
+    let canvas = document.getElementById('canvas');
+    let ctx = canvas.getContext('2d');
+    let startX, startY, isDrawing = false;
+
+    let naturalWidth, naturalHeight;
+
+    document.getElementById("imageFile").addEventListener("change", function (e) {
+        let reader = new FileReader();
+        reader.onload = function (event) {
+            image.src = event.target.result;
+        };
+        reader.readAsDataURL(e.target.files[0]);
+    });
+
+    image.onload = function () {
+        naturalWidth = image.naturalWidth;
+        naturalHeight = image.naturalHeight;
+
+        canvas.width = image.width;
+        canvas.height = image.height;
+        canvas.style.top = image.offsetTop + 'px';
+        canvas.style.left = image.offsetLeft + 'px';
+    };
+
+    canvas.addEventListener('mousedown', function (e) {
+        startX = e.offsetX;
+        startY = e.offsetY;
+        isDrawing = true;
+    });
+
+    canvas.addEventListener('mouseup', function (e) {
+        if (!isDrawing) return;
+        isDrawing = false;
+        let endX = e.offsetX;
+        let endY = e.offsetY;
+
+        let rectX = Math.min(startX, endX);
+        let rectY = Math.min(startY, endY);
+        let rectW = Math.abs(endX - startX);
+        let rectH = Math.abs(endY - startY);
+
+        // Scale to natural size of the image
+        let scaleX = naturalWidth / canvas.width;
+        let scaleY = naturalHeight / canvas.height;
+
+        document.getElementById("x").value = Math.round(rectX * scaleX);
+        document.getElementById("y").value = Math.round(rectY * scaleY);
+        document.getElementById("width").value = Math.round(rectW * scaleX);
+        document.getElementById("height").value = Math.round(rectH * scaleY);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(rectX, rectY, rectW, rectH);
+    });
+</script>
+
+@if (ViewBag.OcrText != null)
+{
+    <h3>OCR Result:</h3>
+    <pre>@ViewBag.OcrText</pre>
+}
